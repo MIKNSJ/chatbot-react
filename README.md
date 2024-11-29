@@ -1,8 +1,19 @@
-# React + Vite
+# chatbot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+This is a [React](https://react.dev) chatbot project bootstrapped with [`create-vite-app`](https://vite.dev/guide/).
 
-Currently, two official plugins are available:
+## Description
+View the website [here]().
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Video
+View a video of the website [here]().
+
+## Tools
+- React
+- Firebase
+- Tailwind CSS
+- Gemini 1.5 Flash
+
+## Contribution
+- Established on November 2024 by MIKNSJ
