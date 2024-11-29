@@ -1,15 +1,13 @@
 import React from "react";
-import { useState, useEffect } from "react"
 import { FaRocketchat } from "react-icons/fa";
 import GoogleButton from 'react-google-button';
-import { signInWithRedirect, getRedirectResult } from "firebase/auth";
-import { auth, provider } from "../backend/firebase.js";
+import { auth, signInWithGoogle } from "../backend/firebase.js";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 
 
 export default function Navbar() {
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
 
     return (
         <>
@@ -19,7 +17,7 @@ export default function Navbar() {
                         <FaRocketchat size={50}/>
                         <h1 className="text-white font-bold sm:text-4xl">Chatbot</h1>
                     </div>
-                    {user ? <h1 className="text-red-500">Sign Out</h1> : <GoogleButton onClick={() => {signInWithRedirect(auth, provider)}}/>}
+                    {user ? <button onClick={() => {auth.signOut()}} className="bg-white text-black p-4 hover:bg-slate-300">Sign Out</button> : <GoogleButton onClick={signInWithGoogle}/>}
                 </div>
             </div>
         </>
